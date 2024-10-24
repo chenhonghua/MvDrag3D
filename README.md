@@ -62,11 +62,11 @@ MvDrag3D: Drag-based Creative 3D Editing via Multi-view Generation-Reconstructio
 <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-@inproceedings{chen2024mvdrag3d,
-title={MVDrag3D: Drag-based Creative 3D Editing via Multi-view Generation-Reconstruction Priors}, 
-author={Honghua Chen and Yushi Lan and Yongwei Chen and Yifan Zhou and Xingang Pan},
-year={2024},
-booktitle={arxiv},
+@article{chen2024mvdrag3d,
+  title={MvDrag3D: Drag-based Creative 3D Editing via Multi-view Generation-Reconstruction Priors},
+  author={Chen, Honghua and Lan, Yushi and Chen, Yongwei and Zhou, Yifan and Pan, Xingang},
+  journal={arXiv preprint arXiv:2410.16272},
+  year={2024}
 }</code></pre>
 </div>
 </section>
