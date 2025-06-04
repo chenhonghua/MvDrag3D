@@ -1,0 +1,13 @@
+CUDA_VISIBLE_DEVICES=0 python main_me.py --config configs/configs.yaml \
+                                          image_path=/mnt/slurm_home/hhchen/dreamgaussian/dragonGaussian/viking_axe2/test_mvdream_0.png \
+                                          src_points_path=/mnt/slurm_home/hhchen/dreamgaussian/dragonGaussian/viking_axe2/keypoints/0000/srcs_single_keypoints.txt \
+                                          tgt_points_path=/mnt/slurm_home/hhchen/dreamgaussian/dragonGaussian/viking_axe2/keypoints/0000/user_single_keypoints.txt \
+                                          prompt="Viking axe, fantasy, weapon, blender, 8k, HD" \
+                                          prompt_edit="Viking axe, fantasy, weapon, blender, 8k, HD" \
+                                          workspace_name="dragonGaussian/viking_axe2" \
+                                          scale=2.0 \
+                                          w_edit=4.0 \
+                                          w_content=4.0 \
+                                          guidance_scale=2.0 \
+                                          num_steps=100 \
+                                          SDE_strength=1.0 \
