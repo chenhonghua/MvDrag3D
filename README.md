@@ -58,6 +58,48 @@ MvDrag3D: Drag-based Creative 3D Editing via Multi-view Generation-Reconstructio
 </div>
 
 
+## User Instructions
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/chenhonghua/MvDrag3D.git
+cd MvDrag3D
+```
+
+### 2. Install dependencies
+Install the required dependencies. For example:
+```bash
+pip install -r requirements.txt
+```
+Or, if you use conda:
+```bash
+conda env create -f environment.yml
+conda activate your_env_name
+```
+
+### 3. Prepare your data
+- Place your images, keypoints, and other data in the appropriate directories (e.g., `MvDrag3D/dragonGaussian/viking_axe2/`).
+- Prepare `src_points_path` and `tgt_points_path` files following the provided examples.
+
+### 4. Run the main program
+You can use the provided bash script:
+```bash
+bash MvDrag3D/bash_test.sh
+```
+Or run the Python script directly:
+```bash
+CUDA_VISIBLE_DEVICES=0 python main_me.py --config configs/configs.yaml ...
+```
+(Refer to `bash_test.sh` for parameter examples.)
+
+### 5. View results
+- The results will be saved in the directory specified by the `workspace_name` parameter.
+
+---
+For more details on parameters, optional features, or troubleshooting, please refer to other documentation in the repository or open an issue.
+
+
+
 <section class="section" id="BibTeX">
 <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
