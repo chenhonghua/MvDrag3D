@@ -62,7 +62,7 @@ MvDrag3D: Drag-based Creative 3D Editing via Multi-view Generation-Reconstructio
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/chenhonghua/MvDrag3D.git
+git clone --recurse-submodules https://github.com/chenhonghua/MvDrag3D.git
 cd MvDrag3D
 ```
 
@@ -101,8 +101,11 @@ conda activate your_env_name
   ```
   test_mvdream_0.png
   ```
+- The file `mv_drag_points_all.txt` contains all automatically computed projected dragging points from four different viewpoints.
 
-- The file `mv_drag_points_occ.txt` contains the projected dragging points from four different viewpoints. Note that: If a point is occluded in any view, its projected coordinate can be set to zero—either automatically using depth information or manually.
+- The file `mv_drag_points_occ.txt` contains only the **visible** projected dragging points from four different viewpoints.  
+  > **Note:** If a point is occluded in any view, its projected coordinates can be set to zero — either automatically based on depth information or manually.
+
 
 
 
