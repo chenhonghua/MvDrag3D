@@ -79,7 +79,32 @@ conda activate your_env_name
 
 ### 3. Prepare your data
 - Place your images, keypoints, and other data in the appropriate directories (e.g., `MvDrag3D/dragonGaussian/viking_axe2/`).
-- Prepare `src_points_path` and `tgt_points_path` files following the provided examples.
+
+- Prepare the `src_points_path` and `tgt_points_path` files by following the provided example formats.
+
+- Keypoints should be manually selected using tools like **MeshLab** or **CloudCompare**.  
+- Source 3D keypoints should be saved in:
+  ```
+  srcs_single_keypoints.txt
+  ```
+- Corresponding target keypoints should be saved in:
+  ```
+  user_single_keypoints.txt
+  ```
+
+- For dragging on a 3D Gaussian Splatting (3DGS) scene:
+- Use **LGM** to generate the initial 3DGS point cloud:
+  ```
+  Initial_3DGS.ply
+  ```
+- The associated input image should be:
+  ```
+  test_mvdream_0.png
+  ```
+
+- The file `mv_drag_points_occ.txt` contains the projected dragging points from four different viewpoints. Note that: If a point is occluded in any view, its projected coordinate can be set to zero—either automatically using depth information or manually.
+
+
 
 ### 4. Run the main program
 You can use the provided bash script:
@@ -94,6 +119,22 @@ CUDA_VISIBLE_DEVICES=0 python main_me.py --config configs/configs.yaml ...
 
 ### 5. View results
 - The results will be saved in the directory specified by the `workspace_name` parameter.
+- Initial_3DGS:
+  ```
+  Initial_3DGS.ply
+  ```
+- After performing multi-view dragging, the editing result is:
+  ```
+  mv_drag_best_test.png
+  ```
+- Based on the dragged image, a coarse 3DGS is reconstructed using LGM:
+  ```
+  Mvdrag_3DGS.ply
+  ```
+- Finally, a two-stage optimization is applied: **Deformation Optimization** and **Appearance Optimization**. We otain:
+  ```
+  Deformation_3DGS.ply and appearance_3DGS.ply.
+  ```
 
 ---
 For more details on parameters, optional features, or troubleshooting, please refer to other documentation in the repository or open an issue.
