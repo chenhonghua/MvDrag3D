@@ -140,6 +140,17 @@ CUDA_VISIBLE_DEVICES=0 python main_me.py --config configs/configs.yaml ...
 For more details on parameters, optional features, or troubleshooting, please refer to other documentation in the repository or open an issue.
 
 
+---
+## Acknowledgements
+
+This project is built upon the great work of the following code bases:
+
+- [mvdream-diffusers](https://github.com/lizhiqi49/mvdream-diffusers)
+- [LGM](https://github.com/3DTopia/LGM)
+- [Dreamgaussian](https://github.com/dreamgaussian/dreamgaussian)
+
+We sincerely thank the authors for their contributions to the community.
+
 
 <section class="section" id="BibTeX">
 <div class="container is-max-desktop content">
