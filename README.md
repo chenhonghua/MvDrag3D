@@ -139,6 +139,31 @@ CUDA_VISIBLE_DEVICES=0 python main_me.py --config configs/configs.yaml ...
   Deformation_3DGS.ply and appearance_3DGS.ply.
   ```
 
+### 6. Parameter Descriptions
+
+This section explains the key parameters used during the editing and dragging process:
+
+- `w_edit` and `w_content`  
+  These are weights that balance the **editing energy**:
+  - `w_edit`: controls how strongly the image is modified.
+  - `w_content`: controls how much the original content is preserved, especially outside the editing mask.  
+    > For minimal changes outside the mask, set `w_content` to a higher value (e.g., `10`).
+
+- `guidance_scale`  
+  The classifier-free guidance (CFG) scale used in diffusion-based editing.  
+  A larger value results in more significant changes to image content.
+
+- `num_steps`  
+  Number of denoising steps used in the **MvDream** editing process.  
+  More steps generally improve quality but increase runtime.
+
+- `scale`  
+  Controls the size of the **multi-view editing mask**.  
+  The default mask is a circle drawn between the dragging start and end points.  
+  `scale` adjusts the radius of this circle — higher values result in larger edit regions.
+
+> For other parameters and advanced configuration options, please refer to the settings in `main_me.py`.
+
 ---
 For more details on parameters, optional features, or troubleshooting, please refer to other documentation in the repository or open an issue.
 
