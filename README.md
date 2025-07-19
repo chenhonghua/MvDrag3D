@@ -174,6 +174,7 @@ For more details on parameters, optional features, or troubleshooting, please re
 This project is built upon the great work of the following code bases:
 
 - [mvdream-diffusers](https://github.com/lizhiqi49/mvdream-diffusers)
+- [DragonDiffusion+DiffEditor](https://github.com/MC-E/DragonDiffusion)
 - [LGM](https://github.com/3DTopia/LGM)
 - [Dreamgaussian](https://github.com/dreamgaussian/dreamgaussian)
 
