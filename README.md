@@ -60,6 +60,11 @@ MvDrag3D: Drag-based Creative 3D Editing via Multi-view Generation-Reconstructio
 
 ## User Instructions
 
+### 2025-10-12
+Sorry for the wrong instruction for the mvdream-diffusers:
+Please use [mvdream-diffusers](https://github.com/lizhiqi49/mvdream-diffusers) as the base model for dragging.
+Users can download mvdream-diffusers and replace the _unet.py_ in mvdream-diffusers with the uploaded version in the MvDrag3D/unetpy.
+
 ### 1. Clone the repository
 ```bash
 git clone --recurse-submodules https://github.com/chenhonghua/MvDrag3D.git
